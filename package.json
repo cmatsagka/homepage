@@ -1,5 +1,5 @@
 {
-	"name": "vanilla-js-template",
+	"name": "homepage",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -17,16 +17,16 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/cmatsagka/vanilla-js-template.git"
+		"url": "git+https://github.com/cmatsagka/homepage.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"type": "module",
 	"bugs": {
-		"url": "https://github.com/cmatsagka/vanilla-js-template/issues"
+		"url": "https://github.com/cmatsagka/homepage/issues"
 	},
-	"homepage": "https://github.com/cmatsagka/vanilla-js-template#readme",
+	"homepage": "https://github.com/cmatsagka/homepage#readme",
 	"devDependencies": {
 		"@babel/core": "^7.29.0",
 		"@babel/preset-env": "^7.29.0",
