@@ -66,26 +66,14 @@ header {
 header::before {
 	content: '';
 	position: absolute;
-	top: 0%;
+	top: -10%;
 	left: 0;
 	width: 100%;
-	height: 45%;
+	height: 55%;
 	background-color: var(--clr-primary);
 	transform-origin: bottom left;
 	transform: skewY(-25deg);
 	z-index: -1;
-}
-
-.header-portrait {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: var(--spacing-lg) 0;
-}
-
-#name {
-	margin-top: -3rem;
-	color: var(--clr-bg);
 }
 
 .bio-card {
@@ -99,6 +87,21 @@ header::before {
 .logos {
 	display: flex;
 	gap: var(--spacing-sm);
+}
+
+.portrait-wrapper {
+	box-shadow: 0 6px 6px var(--clr-shadow);
+}
+
+#name {
+	font-size: var(--font-size-xl);
+	margin-top: -4rem;
+	padding-left: var(--spacing-sm);
+	color: var(--clr-bg);
+}
+
+.bio-card h2 {
+	margin-top: var(--spacing-md);
 }
 
 main h2 {
@@ -181,33 +184,27 @@ footer {
 
 @media (min-width: 768px) {
 	header {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: repeat(2, 1fr);
-		/* align-items: center; */
-		/* gap: var(--spacing-lg); */
-		padding: var(--spacing-lg);
 	}
 
 	header::before {
-		/* height: 100%; */
+		height: 100%;
 		transform: skewY(-10deg);
 	}
 
-	.header-portrait {
-		padding: 0;
-		grid-column: 1 / 3;
-		grid-row: 1 / 3;
-		justify-self: start;
-		align-self: self-start;
-		z-index: 1;
+	.portrait-wrapper {
+		float: left;
+		margin-right: var(--spacing-lg);
+		margin-bottom: var(--spacing-md);
 	}
 
 	.bio-card {
-		grid-column: 1 / -1;
-		grid-row: 1 / -1;
+		padding: var(--spacing-lg);
+	}
 
-		padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg) 320px;
+	.bio-card::after {
+		content: '';
+		display: table;
+		clear: both;
 	}
 
 	.bio-card .logos {
