@@ -83,7 +83,7 @@ header {
 .header-image {
 	width: 100%;
 	display: block;
-	box-shadow: 0 8px 20px hsla(27, 80%, 46%, 0.2);
+	box-shadow: 0 8px 20px var(--clr-shadow);
 }
 
 .image-wrapper h1 {
@@ -96,7 +96,6 @@ header {
 
 .bio-card {
 	margin-top: var(--spacing-md);
-
 	padding: var(--spacing-sm);
 }
 
@@ -181,9 +180,36 @@ footer {
 }
 
 .contact-section .logos {
+	display: flex;
 	margin: 0 auto;
 	gap: var(--spacing-lg);
 }
 
 @media (min-width: 768px) {
+	header {
+		display: grid;
+		grid-template-columns: 260px 1fr;
+		align-items: center;
+		margin: 0 auto;
+		padding: var(--spacing-lg);
+	}
+
+	.header-image {
+		margin-right: -80px;
+		z-index: 2;
+	}
+
+	.bio-card {
+		padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg)
+			var(--spacing-xl);
+		background: var(--clr-bg);
+		box-shadow: 0 5px 15px var(--clr-shadow);
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-md);
+	}
+
+	.socials {
+		justify-content: flex-end;
+	}
 }
