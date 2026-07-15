@@ -74,29 +74,25 @@ header {
 	z-index: -1;
 }
 
-.image-wrapper {
-	position: relative;
-	max-width: 320px;
-	margin: 0 auto;
-}
-
 .header-image {
 	width: 100%;
 	display: block;
 	box-shadow: 0 8px 20px var(--clr-shadow);
 }
 
-.image-wrapper h1 {
-	position: absolute;
-	bottom: var(--spacing-sm);
-	left: var(--spacing-sm);
-
-	color: var(--clr-bg);
-}
-
 .bio-card {
 	margin-top: var(--spacing-md);
 	padding: var(--spacing-sm);
+}
+
+.bio-card h1 {
+	margin-top: -5rem;
+	padding-left: var(--spacing-xsm);
+	color: var(--clr-bg);
+}
+
+.bio-card h2 {
+	margin-top: var(--spacing-md);
 }
 
 .socials {
@@ -186,27 +182,21 @@ footer {
 }
 
 @media (min-width: 768px) {
-	header {
-		display: grid;
-		grid-template-columns: 260px 1fr;
-		align-items: center;
-		margin: 0 auto;
-		padding: var(--spacing-lg);
-	}
-
 	.header-image {
-		margin-right: -80px;
-		z-index: 2;
+		float: left;
+		width: 280px;
+		transform: translate(-40px, -40px);
 	}
 
 	.bio-card {
-		padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg)
-			var(--spacing-xl);
+		margin: var(--spacing-lg);
 		background: var(--clr-bg);
 		box-shadow: 0 5px 15px var(--clr-shadow);
-		display: flex;
-		flex-direction: column;
-		gap: var(--spacing-md);
+	}
+
+	.bio-card h1 {
+		color: var(--clr-primary);
+		margin-top: 0;
 	}
 
 	.socials {
