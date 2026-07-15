@@ -60,6 +60,11 @@ p {
 	font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
+.logo-icon {
+	width: 25px;
+	height: auto;
+}
+
 header {
 	position: relative;
 	padding: var(--spacing-md);
@@ -171,7 +176,7 @@ footer {
 	font-size: var(--font-size-md);
 }
 
-.contact-info img {
+.contact-info svg {
 	display: none;
 }
 
@@ -212,7 +217,9 @@ footer {
 	footer {
 		display: flex;
 		flex-direction: row;
+		justify-content: space-between;
 		padding: var(--spacing-md);
+		margin-top: var(--spacing-md);
 	}
 
 	#contact {
@@ -224,12 +231,19 @@ footer {
 		gap: var(--spacing-sm);
 	}
 
-	.contact-info img {
+	.contact-info svg {
 		display: block;
+		align-self: center;
 	}
 
 	.contact-section .logos {
 		margin: 0;
 		margin-top: var(--spacing-xsm);
+	}
+}
+
+@media (min-width: 1024px) {
+	.work-cards {
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
