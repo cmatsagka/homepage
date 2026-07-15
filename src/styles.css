@@ -161,6 +161,10 @@ main h2 {
 	margin-right: auto;
 }
 
+.info-header a {
+	align-self: center;
+}
+
 footer {
 	display: flex;
 	flex-direction: column;
