@@ -143,6 +143,7 @@ main h2 {
 	flex-direction: column;
 	align-items: stretch;
 	gap: var(--spacing-md);
+	padding: var(--spacing-sm);
 }
 
 .card {
@@ -150,7 +151,6 @@ main h2 {
 	flex-direction: column;
 	height: 100%;
 	gap: var(--spacing-sm);
-	margin: var(--spacing-md) var(--spacing-sm);
 	background-color: var(--clr-bg);
 	box-shadow: 0 6px 6px var(--clr-shadow);
 	transition:
@@ -170,7 +170,7 @@ main h2 {
 	flex-direction: column;
 	gap: var(--spacing-sm);
 	padding: var(--spacing-md);
-	margin-bottom: var(--spacing-lg);
+	flex-grow: 1;
 }
 
 .info-header {
@@ -191,6 +191,34 @@ main h2 {
 	align-items: center;
 	flex-shrink: 0;
 	transform: translateY(2px);
+}
+
+.tags-wrapper {
+	display: flex;
+	flex-wrap: wrap-reverse;
+	justify-content: center;
+	gap: var(--spacing-xsm);
+	margin-top: auto;
+	padding-top: var(--spacing-sm);
+}
+
+.tag {
+	font-size: var(--font-size-sm);
+	color: var(--clr-primary);
+	font-weight: 600;
+	padding: 0.25rem 0.75rem;
+	border-radius: 4px;
+	box-shadow: 0 4px 4px var(--clr-shadow);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.tag:hover,
+.tag:focus-within {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 12px var(--clr-hover);
+	outline: none;
 }
 
 footer {

@@ -68,8 +68,22 @@ export function renderProjects() {
 		const projectAbout = document.createElement('p');
 		projectAbout.classList.add('work-about');
 		projectAbout.textContent = proj.description;
-
 		info.appendChild(projectAbout);
+
+		if (proj.tags && proj.tags.length > 0) {
+			const tagsWrapper = document.createElement('div');
+			tagsWrapper.classList.add('tags-wrapper');
+
+			proj.tags.forEach((tagText) => {
+				const tagSpan = document.createElement('span');
+				tagSpan.classList.add('tag');
+				tagSpan.textContent = tagText;
+				tagsWrapper.appendChild(tagSpan);
+			});
+
+			info.appendChild(tagsWrapper);
+		}
+
 		projectCard.appendChild(projectImage);
 		projectCard.appendChild(info);
 
