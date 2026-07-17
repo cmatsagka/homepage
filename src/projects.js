@@ -14,7 +14,7 @@ export function renderProjects() {
 		const projectImage = document.createElement('img');
 		projectImage.classList.add('card-img');
 		projectImage.src = proj.images.x1;
-		projectImage.srcset = `${proj.images.x1} 1x, ${proj.images.x2} x2`;
+		projectImage.srcset = `${proj.images.x1} 1x, ${proj.images.x2} 2x`;
 		projectImage.alt = '';
 		projectImage.setAttribute('aria-hidden', true);
 		projectImage.width = 900;
