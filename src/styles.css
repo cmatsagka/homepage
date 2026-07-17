@@ -107,6 +107,9 @@ header {
 
 .header-image {
 	width: 100%;
+	max-width: 300px;
+	aspect-ratio: 3 / 4;
+	object-fit: cover;
 	display: block;
 	box-shadow: 0 8px 20px var(--clr-shadow);
 }
@@ -236,6 +239,14 @@ footer {
 	color: var(--clr-bg);
 }
 
+.footer-image {
+	width: 100%;
+	max-width: 400px;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	display: block;
+}
+
 .contact-section {
 	display: flex;
 	flex-direction: column;
@@ -296,6 +307,13 @@ footer {
 		justify-content: space-between;
 		padding: var(--spacing-md);
 		margin-top: var(--spacing-md);
+	}
+
+	.footer-image {
+		max-width: 300px;
+		aspect-ratio: 3 / 4;
+		object-fit: cover;
+		display: block;
 	}
 
 	#contact {

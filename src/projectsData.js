@@ -23,31 +23,6 @@ export const projects = [
 	},
 
 	{
-		title: 'Weather App',
-		description:
-			'A responsive weather forecast web application featuring real-time weather data retrieval. Utilizes asynchronous JavaScript (Fetch API, Promises, async/await) to fetch, process, and dynamically present geographical data.',
-		githubUrl: 'https://github.com/cmatsagka/weather-app',
-		liveUrl: 'https://cmatsagka.github.io/weather-app/',
-		tags: ['JavaScript', 'APIs', 'Async/Await', 'JSON'],
-		images: { x1: weatherApp1x, x2: weatherApp2x },
-	},
-
-	{
-		title: 'Todo LIst Dashboard',
-		description:
-			'A modular, single-page To-Do List application built with vanilla JavaScript. Features dynamic project folders, priority tracking, and local storage persistence.',
-		githubUrl: 'https://github.com/cmatsagka/todo-list',
-		liveUrl: 'https://cmatsagka.github.io/todo-list/',
-		tags: [
-			'JavaScript (ES6)',
-			'Local Storage',
-			'Modular Architecture',
-			'CSS Grid/Flexbox',
-		],
-		images: { x1: todoList1x, x2: todoList2x },
-	},
-
-	{
 		title: 'Tic-Tac-Toe',
 		description:
 			'A modular, zero-globals Tic-Tac-Toe game built with vanilla JS. Emphasizes clean architecture using Factory Functions and the Module Pattern.',
@@ -73,6 +48,21 @@ export const projects = [
 	},
 
 	{
+		title: 'Todo LIst Dashboard',
+		description:
+			'A modular, single-page To-Do List application built with vanilla JavaScript. Features dynamic project folders, priority tracking, and local storage persistence.',
+		githubUrl: 'https://github.com/cmatsagka/todo-list',
+		liveUrl: 'https://cmatsagka.github.io/todo-list/',
+		tags: [
+			'JavaScript (ES6)',
+			'Local Storage',
+			'Modular Architecture',
+			'CSS Grid/Flexbox',
+		],
+		images: { x1: todoList1x, x2: todoList2x },
+	},
+
+	{
 		title: 'Personal Library',
 		description:
 			'A digital bookshelf app for cataloging books. Built with vanilla JS, focusing on dynamic object prototypes, DOM tables, and custom form validation.',
@@ -85,5 +75,15 @@ export const projects = [
 			'DOM API',
 		],
 		images: { x1: library1x, x2: library2x },
+	},
+
+	{
+		title: 'Weather App',
+		description:
+			'A responsive weather forecast web application featuring real-time weather data retrieval. Utilizes asynchronous JavaScript (Fetch API, Promises, async/await) to fetch, process, and dynamically present geographical data.',
+		githubUrl: 'https://github.com/cmatsagka/weather-app',
+		liveUrl: 'https://cmatsagka.github.io/weather-app/',
+		tags: ['JavaScript', 'APIs', 'Async/Await', 'JSON'],
+		images: { x1: weatherApp1x, x2: weatherApp2x },
 	},
 ];
