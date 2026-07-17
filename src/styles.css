@@ -17,11 +17,12 @@
 
 	--clr-bg: #ffffff;
 	--clr-primary: #14532d;
+	--clr-primary-transparent: hsla(144, 61%, 20%, 0.85);
 	--clr-text-main: #000000;
 	--clr-text-secondary: #444444;
 
 	--clr-shadow: hsla(150, 15%, 10%, 0.1);
-	--clr-hover: hsla(142, 76%, 36%, 0.1);
+	--clr-hover: hsla(142, 76%, 36%, 0.15);
 }
 
 * {
@@ -101,8 +102,8 @@ header {
 	position: absolute;
 	inset: 0;
 	height: 320px;
-	background-color: var(--clr-primary);
-	clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+	background-color: transparent;
+	border-bottom: 4px solid var(--clr-primary);
 	z-index: -1;
 }
 
@@ -185,6 +186,7 @@ main h2 {
 	align-items: stretch;
 	gap: var(--spacing-md);
 	padding: var(--spacing-sm);
+	margin-bottom: var(--spacing-xl);
 }
 
 .card {
@@ -273,8 +275,9 @@ main h2 {
 footer {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--clr-primary);
-	color: var(--clr-bg);
+	background-color: var(--clr-bg);
+	color: var(--clr-text-main);
+	box-shadow: 0 -6px 10px -4px var(--clr-shadow);
 }
 
 .footer-image {
@@ -312,7 +315,6 @@ footer {
 	display: flex;
 	margin: 0 auto;
 	gap: var(--spacing-lg);
-	filter: invert(1) brightness(2);
 }
 
 @media (min-width: 768px) {
