@@ -18,6 +18,7 @@
 	--clr-bg: #ffffff;
 	--clr-primary: #14532d;
 	--clr-text-main: #000000;
+	--clr-text-secondary: #444444;
 
 	--clr-shadow: hsla(150, 15%, 10%, 0.1);
 	--clr-hover: hsla(142, 76%, 36%, 0.1);
@@ -127,6 +128,43 @@ header {
 
 .bio-card h2 {
 	margin-top: var(--spacing-md);
+}
+
+.bio-lead {
+	font-size: var(--font-size-md);
+	font-weight: 500;
+	line-height: 1.5;
+	color: var(--clr-primary);
+	margin-bottom: var(--spacing-md);
+}
+
+.bio-pillars {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+	margin-bottom: var(--spacing-md);
+}
+
+.pillar h3 {
+	font-size: var(--font-size-sm);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: var(--spacing-xsm);
+}
+
+.pillar p {
+	font-size: var(--font-size-sm);
+	color: var(--clr-text-secondary);
+}
+
+.bio-closing {
+	font-size: var(--font-size-sm);
+	padding-top: var(--spacing-md);
+	max-width: 60ch;
+	line-height: 1.5;
+	text-align: right;
+	margin-left: auto;
 }
 
 .socials {
@@ -241,10 +279,11 @@ footer {
 
 .footer-image {
 	width: 100%;
-	max-width: 400px;
-	aspect-ratio: 4 / 3;
+	max-width: 320px;
+	aspect-ratio: 3 / 4;
 	object-fit: cover;
 	display: block;
+	margin: 0 auto;
 }
 
 .contact-section {
@@ -258,8 +297,11 @@ footer {
 	text-align: center;
 }
 
-#contact-call {
-	font-size: var(--font-size-md);
+.contact-text {
+	font-size: var(--font-size-base);
+	line-height: 1.6;
+	margin-bottom: var(--spacing-md);
+	max-width: 45ch;
 }
 
 .contact-info svg {
@@ -270,6 +312,7 @@ footer {
 	display: flex;
 	margin: 0 auto;
 	gap: var(--spacing-lg);
+	filter: invert(1) brightness(2);
 }
 
 @media (min-width: 768px) {
@@ -283,6 +326,15 @@ footer {
 		margin: var(--spacing-lg);
 		background: var(--clr-bg);
 		box-shadow: 0 5px 15px var(--clr-shadow);
+	}
+
+	.bio-pillars {
+		flex-direction: row;
+		gap: var(--spacing-lg);
+	}
+
+	.pillar {
+		flex: 1;
 	}
 
 	.bio-card h1 {
@@ -304,16 +356,16 @@ footer {
 	footer {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
-		padding: var(--spacing-md);
+		justify-content: space-around;
+		padding: var(--spacing-lg) var(--spacing-md);
 		margin-top: var(--spacing-md);
+		align-items: center;
+		gap: var(--spacing-lg);
 	}
 
 	.footer-image {
-		max-width: 300px;
-		aspect-ratio: 3 / 4;
-		object-fit: cover;
-		display: block;
+		max-width: 280px;
+		margin: 0;
 	}
 
 	#contact {
