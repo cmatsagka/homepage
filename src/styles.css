@@ -19,8 +19,8 @@
 	--clr-primary: #14532d;
 	--clr-text-main: #000000;
 
-	--clr-shadow: hsla(150, 15px, 10%, 0.1);
-	--clr-hover: hsl(142, 76%, 36%, 0.1);
+	--clr-shadow: hsla(150, 15%, 10%, 0.1);
+	--clr-hover: hsla(142, 76%, 36%, 0.1);
 }
 
 * {
@@ -78,8 +78,17 @@ a:focus-visible {
 }
 
 .logo-icon {
-	width: 25px;
-	height: auto;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-icon img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
 header {
@@ -129,7 +138,7 @@ main h2 {
 	margin: var(--spacing-md) 0;
 }
 
-.work-cards {
+.projects-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -166,6 +175,7 @@ main h2 {
 .info-header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	gap: var(--spacing-sm);
 }
 
@@ -231,7 +241,7 @@ footer {
 		justify-content: flex-end;
 	}
 
-	.work-cards {
+	.projects-container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		padding: var(--spacing-md);
@@ -266,7 +276,7 @@ footer {
 }
 
 @media (min-width: 1024px) {
-	.work-cards {
+	.projects-container {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
